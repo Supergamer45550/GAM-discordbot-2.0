@@ -15,6 +15,10 @@ intents.guild_messages = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 client = discord.Bot(command_prefix='', intents=intents)
 
+@bot.event
+async def on_ready():
+    print("Hello World")
 
 
+bot.load_extension("commands.test") 
 bot.run("")
